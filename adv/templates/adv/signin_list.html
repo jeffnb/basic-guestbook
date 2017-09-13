@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Guestbook Sign-Ins</h1>
+
+<h4>Sign the book</h4>
+<h4>Existing Sign-Ins</h4>
+<ul>
+    {% if signins %}
+        {% for signin in signins %}
+            <li><strong>{{ signin.name }}</strong> at {{ signin.created }}</li>
+        {% endfor %}
+    {% else %}
+        <li>None available</li>
+    {% endif %}
+</ul>
+
+</body>
+</html>
